@@ -130,7 +130,17 @@
 }
 
 
-
+@media (max-width: 1200px) {
+  .card_accordeon{
+    margin-bottom: .5rem;
+  }
+  .flexbox{
+    padding: .5rem;
+  }
+  .container{
+    top: 53%;
+  }
+}
 @media (max-width: 868px) {
   body.disabled{
     overflow: hidden;
@@ -178,14 +188,30 @@
 }
 @media (max-width: 600px) {
     .container{
-      width: 80%;
-      height: 56%;
+      width: 70%;
+      height: auto;
     }
     .container_body p{
         line-height: normal;
     }
     .navbar{
         padding: 25px 20px;
+    }
+    #container_accordeon{
+      width: 90%;
+    }
+    .card_accordeon{
+      width: 100%;
+    }
+    .panel{
+      width: 100%;
+      height: 100px;
+    }
+    .panel img{
+      display: none;
+    }
+    .panel ul{
+    margin-top: 0.5rem;
     }
   }
 @media (max-width: 380px) {

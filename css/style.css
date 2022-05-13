@@ -13,6 +13,16 @@
   width: 100%;
   height: 100%;
 }
+#current{
+  font-weight: normal;
+  background-color: #FFD32D;  
+  border-radius: 20px;
+  padding: 0px 10px;
+  color: white;
+}
+.menu-list li a:hover{
+  color: #FFD32D;
+}
 .navbar{
   position: relative;
   padding: 25px 50px;
@@ -44,11 +54,6 @@
   margin-left: 25px;
   text-decoration: none;
   transition: all 0.3s ease;
-}
-.menu-list li a:hover{ /*  DOIT ETRE SUR LA PAGE ACTIVE */
-  font-weight: normal;
-  background-color: #FFD32D;  
-  border-radius: 10px;
 }
 .icon{
   color: black;
@@ -221,19 +226,16 @@ input[type="radio"]{
 
 /* Page Contact */
 
-#container_form{
+#container_contact{
   position: absolute; /* postulat de départ */
   top: 50%; left: 50%; /* à 50%/50% du parent référent */
   transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
   background: rgba(0, 0, 0, 0.5);
   box-shadow: 15px 15px 4px rgba(0, 0, 0, 0.25);
   border-radius: 40px;
-/*   display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
   width: auto;
   height: auto;
-  padding: 2rem; /*  A REVOIR */
+  padding: 2rem;
   color: white;
 }
 .content{
@@ -242,19 +244,18 @@ input[type="radio"]{
   align-items: center;
   justify-content: space-between;
 }
-.btn_form, h1{
+.btn_form, .title{
   border-radius: 20px;
   background-color: #FFD32D;
   font-size: 1.3rem;
 }
-h1{
+.content, .title{
   padding: .4rem;
   font-weight: normal;
-  margin-bottom: 2.5rem;
 }
 .btn_form{
   border: none;
-  padding: 0 50px;
+  padding: 5px 50px;
   color: white;
   margin-top: 2.5rem;
   text-align: center;
@@ -268,7 +269,6 @@ input[type=text]{
   border: none;
   border-bottom: white 1px solid;
   color: white;
-  margin-bottom: 1rem;
 }
 #adress{
   margin-bottom: 2rem;
@@ -286,6 +286,141 @@ textarea:focus{
   color: white;
   padding: .2rem;
 }
+/* Page Login */
+
+#container_login{
+  position: absolute; /* postulat de départ */
+  top: 50%; left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 15px 15px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  padding: 2rem;
+  width: 500px;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+.container_box{
+  display: flex;
+  width: 200%;
+  transition-duration: 1000ms;
+}
+.box1{
+  width: 100%;
+  margin-top: 2.5rem;
+}
+#one_login:checked ~ .button_login .one_login{
+  background-color: #FFD32D;
+  border-radius: 20px;
+  color: black;
+  padding: 5px 0;
+  margin-left: -20px;
+}
+#two_login:checked ~ .button_login .two_login{
+    border-radius: 20px;
+    background: #FFD32D;
+    width: 110px;
+    color: black;
+    padding: 5px 0;
+}
+#two_login:checked ~ .container_box{
+    margin-left: -100%;
+}
+.one_login{
+  padding: 5px 0;
+  width: 110px;
+}
+.button_validation, .check_regist{
+  margin-top: 1.5rem;
+}
+#email, #password, #First_name, #Last_Name, #email_register, #pass_register{
+  margin-bottom: 1.5rem;
+}
+.check{
+  margin-left: -6.8rem;
+  margin-bottom: 3rem;
+}
+.btn_register{
+  margin-top: 1rem;
+}
+.box_login{
+  margin-top: 5rem;
+}
+#container_login .switch{
+  display: flex;
+  justify-content: space-evenly;
+  width: 200%;
+}
+.switch{
+  display: flex;
+}
+/* Coté gauche du formulaire */
+.button_login{
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  background:  rgba(165, 165, 165, 0.2);
+  color: white;
+  width: 220px;
+  margin: auto 110px;
+  align-items: center;
+}
+.button_validation{
+  cursor: pointer;
+}
+input[type=email],input[type=password]{
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  outline: none;
+}
+input[type=radio]{
+  display: none;
+}
+.btn_login{
+  border: none;
+  background-color: #FFD32D;
+  border-radius: 20px;
+  padding: 5px 60px;
+  width: 50%;
+}
+#check_log, #check_register{
+  margin-right: .5rem;
+}
+/* Coté droit du formulaire */
+#First_name, #Last_Name{
+  width: 70%;
+}
+#email_register, #pass_register{
+  margin-top: 0;
+}
+/* PAGE DE REDIRECTION  */
+.redirection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100vh;
+}
+.icon_redirection{
+  font-size: 10rem;
+}
+.content_redirection h1{
+  font-weight: bold;
+}
+.content_redirection span{
+  background-color: #FFD32D;
+  color: white;
+  padding: 0 5px;
+}
+.content_redirection a{
+  letter-spacing: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
 
 
 /* MEDIA QUERIES */
@@ -300,7 +435,7 @@ textarea:focus{
   .container{
     top: 53%;
   }
-  #container_form{
+  #container_contact{
     top: 52%;
   }
 }
@@ -341,9 +476,8 @@ textarea:focus{
   .navbar.show .menu-list li a{
     margin-left: 0px;
   }
-  .menu-list li a:hover{
-    color: #FFD32D;
-    background-color: unset;
+  .menu-list li a, .icon{
+    color: white;
   }
 }
 @media (max-width: 768px) {
@@ -354,7 +488,7 @@ textarea:focus{
   .only_card{
     margin: 0 1.5rem 0 1.5rem;
   }
-  #container_form{
+  #container_contact{
     width: 85%;
     top: 52%;
   }
@@ -393,7 +527,22 @@ textarea:focus{
     .carousel_flex{
       padding: 0;
     }
+    #container_login{
+      display: block;
+      width: 400px;
+    }
+    #First_name, #Last_Name{
+      width: auto;
+    }
+    #email, #password{
+      width: 90%;
+    }
+    .container_box{
+      width: 200%;
+    }
+
   }
+
 @media (max-width: 380px) {
   .navbar .logo a{
     font-size: 27px;
@@ -404,5 +553,9 @@ textarea:focus{
   }
   .container h1 h2{
       font-size: 16px;
+  }
+  .button_login{
+    width: auto;
+    margin: auto;
   }
 }
